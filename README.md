@@ -14,3 +14,17 @@ gst-launch-1.0 videotestsrc num-buffers=1 ! jpegenc ! filesink location=testImag
 ```
 gst-launch-1.0 audiotestsrc num-buffers=50 ! vorbisenc ! oggmux name=mux ! filesink location=test.ogg videotestsrc num-buffers=50 ! theoraenc ! mux.
 ```
+
+## Building GST Players using Python
+
+### Audio Player
+
+```
+python3 playbin_audioplayer.py
+```
+
+### Video Player
+
+```
+python3 playbin_videoplayer.py
+```
