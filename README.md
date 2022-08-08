@@ -28,3 +28,26 @@ python3 playbin_audioplayer.py
 ```
 python3 playbin_videoplayer.py
 ```
+
+### Webcam Viewer
+
+```
+python3 webcam_viewer.py
+```
+
+### App sink demo
+
+```
+python3 appsink_demo.py
+```
+
+### RTSP Server and client
+#### Server
+```
+python3 rtsp_server.py
+```
+
+#### Client
+```
+gst-launch-1.0 rtspsrc location=rtsp://127.0.0.1:8554/test is-live=true ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! autovideosink
+```
